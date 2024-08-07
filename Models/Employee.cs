@@ -7,7 +7,7 @@ namespace Software_Developer_CSharp_Test_01_v1_Dec_2023.Models
     {
         public int Id { get; set; }
         public string? Name { get; set; }
-        public long HoursWorked { get; set; }
+        public float HoursWorked { get; set; }
 
 
     }

@@ -9,11 +9,11 @@
             long epochTime = dateTimeOffset.ToUnixTimeSeconds();
             return epochTime;
         }
-        public static long CalculateTotalHoursWorked(string startDateUtc, string endDateUtc)
+        public static float CalculateTotalHoursWorked(string startDateUtc, string endDateUtc)
         {
             long startDateEpoch = ParseDate(startDateUtc);
             long endDateEpoch = ParseDate(endDateUtc);
-            return (endDateEpoch - startDateEpoch) / 60 / 60; //sec*minutes
+            return ((float)((endDateEpoch - startDateEpoch)/60)/60); //sec*minutes
         }
     }
 }

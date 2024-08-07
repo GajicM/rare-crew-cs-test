@@ -42,6 +42,6 @@ namespace Software_Developer_CSharp_Test_01_v1_Dec_2023.Models
         public String? DeletedOn { get; set; }
         [JsonIgnore]
         [XmlIgnore]
-        public long TotalTimeWorked { get; set; }
+        public float TotalTimeWorked { get; set; }
     }
 }
