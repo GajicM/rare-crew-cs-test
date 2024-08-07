@@ -1,0 +1,45 @@
+﻿@model List<Software_Developer_CSharp_Test_01_v1_Dec_2023.Models.Employee>
+
+@{
+    ViewData["Title"] = "EmployeeTable";
+}
+
+<h1>EmployeeTable</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Total Time Worked (hours)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            string rowClass = emp.HoursWorked < 100 ? "low-hours" : "";
+            <tr class="@rowClass">
+                <td>@emp.Name </td>
+                <td>@emp.HoursWorked</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    tr.low-hours {
+        background-color: #FFDDDD;
+    }
+</style>
+
+
